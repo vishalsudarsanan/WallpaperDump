@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/hg.jpg">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+</head>
+<body>
+    <div id="hero">
+        <div class="navbar1"> 
+            <p id="name" style="color:aliceblue;">WallpaperDump</p>
+            
+            <div class="user">
+                <button class="home1" type="button" style="margin-left: 870px"><a href="explorepage.html" style= "text-decoration:none ;color:white">Explore</a></button>
+                <button class="explore" type="button"><a href="signin.html" style="text-decoration:none ;color:white">Sign In</a></button>
+                
+                
+            </div>
+        </div>
+        <div class="container1">
+            <div class="info">
+              <div class="content">
+                <h2>D I S C O V E R</h2>
+                <h2>D I S C O V E R</h2>
+              </div>
+              <br>
+                <p>Find all types of Wallpapers<br> Just Relax, we got you !</p>  
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="slider" data-ride="carousel">
+            <img src="images/leftarrow.png" id="prev">
+            <div class="preview">
+                <img src="images/bg.jpg" data-ride="carousel" class="active thumbnail">
+                <img src="images/ng.jpg" data-ride="carousel" class="active thumbnail">
+                <img src="images/hg.jpg" data-ride="carousel" class="active thumbnail">
+                <img src="images/ag.png" data-ride="carousel" class="active thumbnail">
+                <img src="images/lol.jpg" data-ride="carousel" class="active thumbnail">
+                <img src="images/gg.jpg" data-ride="carousel" class="active thumbnail">
+                <img src="images/kg.jpg" data-ride="carousel" class="active thumbnail">
+            </div>
+            <img src="images/rightarrow.png" id="next">
+        </div>        
+    </div>
+    <div class="remaining">
+      <br>
+    <h4 style="margin-left: 20px;"> WallpaperDump </h4>
+    <h5 style="margin-left: 20px;">WallpaperDump is Wallpaper website designed for young generation <br>looking for 
+      aesthetic Wallpapers.
+    </h5>
+    <h4 style="margin-left: 20px;">About us:</h4>
+    <h5 style="margin-left: 20px;">Vishal Sudarshan</h5>
+    <p style="margin-left: 20px;">Contact: 6353244516</p>
+    </div>
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/profile.php?id=100004818828709" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Vishaal76" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://mail.google.com/mail/u/0/?ogbl#inbox" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/vishaalll___/" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/vishal-sudarshan-2b147122b/" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/VishalS4646" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+    
+        <script>
+
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var thumbnail = document.getElementsByClassName("thumbnail");
+            var hero = document.getElementById("hero");
+
+            var backgroundImg = new Array(
+                "images/bg1.jpg",
+                "images/ng1.jpg",
+                "images/hg1.jpg",
+                "images/ag1.png",
+                "images/lol1.jpg",
+                "images/gg1.jpg",
+                "images/kg1.jpg",
+                );
+            let i = 0;
+            next.onclick = function() {
+
+                if(i < 6){
+                    hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+                    thumbnail[i+1].classList.add("active");
+                    thumbnail[i].classList.remove("active");
+                    i++;
+                }
+        
+            }  
+            prev.onclick = function() {
+                
+                if(i > 0){
+                    hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+                    thumbnail[i-1].classList.add("active");
+                    thumbnail[i].classList.remove("active");
+                    i--;
+                }
+        
+            }
+
+        </script>
+        
+</body>
+</html>
